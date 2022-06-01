@@ -4,47 +4,47 @@
              x:Class="IMAD_Base_Converter.MainPage">
 			 
     <ScrollView
-        BackgroundColor="#062c30">
+        BackgroundColor="{StaticResource Primary}">
         <VerticalStackLayout 
             Spacing="25"
             Padding="30">
 
             <Label Text="Welcome! This program will convert a number in one base system to a desired base system."/>
-            <HorizontalStackLayout Spacing="10">
-                <Label Text="Enter a Number:" 
-                       FontSize="20"/>
+            <HorizontalStackLayout Spacing="10" 
+                                   BackgroundColor="{StaticResource Secondary}"
+                                   Padding="10,0,0,0">
+                <Label Text="Enter a Number:" VerticalOptions="Center"/>
                 <Entry x:Name="numberInput"
                        Text="0"
-                       WidthRequest="300"
+                       TextColor="{StaticResource LabelText}"
                        FontSize="20"/>
             </HorizontalStackLayout>
-            <Label Text="Select an Input Base system." 
-                       FontSize="20"/>
-            <Frame BackgroundColor="#05595b">
-                <HorizontalStackLayout>
-                    <RadioButton x:Name="iBin" Content="Binary"/>
-                    <RadioButton x:Name="iOct" Content="Octal"/>
-                    <RadioButton x:Name="iDec" Content="Decimal"/>
-                    <RadioButton x:Name="iHex" Content="Hexadecimal"/>
+            <Label Text="Select an Input Base system."/>
+            <Frame BackgroundColor="{StaticResource Secondary}">
+                <HorizontalStackLayout HorizontalOptions="Center">
+                    <RadioButton x:Name="iBin" Content="Bin"/>
+                    <RadioButton x:Name="iOct" Content="Oct"/>
+                    <RadioButton x:Name="iDec" Content="Dec"/>
+                    <RadioButton x:Name="iHex" Content="Hex"/>
                 </HorizontalStackLayout>
             </Frame>
-            <Label Text="Select An Output Base system." 
-                       FontSize="20"/>
-            <Frame BackgroundColor="#05595b">
-                <HorizontalStackLayout>
-                    <RadioButton x:Name="oBin" Content="Binary"/>
-                    <RadioButton x:Name="oOct" Content="Octal"/>
-                    <RadioButton x:Name="oDec" Content="Decimal"/>
-                    <RadioButton x:Name="oHex" Content="Hexadecimal"/>
+            <Label Text="Select An Output Base system."/>
+            <Frame BackgroundColor="{StaticResource Secondary}">
+                <HorizontalStackLayout HorizontalOptions="Center">
+                    <RadioButton x:Name="oBin" Content="Bin"/>
+                    <RadioButton x:Name="oOct" Content="Oct"/>
+                    <RadioButton x:Name="oDec" Content="Dec"/>
+                    <RadioButton x:Name="oHex" Content="Hex"/>
                 </HorizontalStackLayout>
             </Frame>
             <Button x:Name="convertButton" 
                     Text="Convert"
                     Clicked="ConvertCommand"
-                    BackgroundColor="#e2d784"/>
+                    BackgroundColor="{StaticResource Accent}"
+                    TextColor="{StaticResource Primary}"/>
             <Label x:Name="resultLabel"
                    Text="00000000"
-                   FontSize="100"
+                   FontSize="50"
                    HorizontalTextAlignment="Center"/>
         </VerticalStackLayout>
     </ScrollView>
