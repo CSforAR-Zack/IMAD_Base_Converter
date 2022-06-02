@@ -38,7 +38,7 @@
                 </HorizontalStackLayout>
             </Frame>
             <Button x:Name="convertButton" 
-                    Text="Convert"
+                    Text="Encode"
                     Clicked="ConvertCommand"
                     BackgroundColor="{StaticResource Accent}"
                     TextColor="{StaticResource Primary}"/>
